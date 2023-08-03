@@ -1,7 +1,6 @@
 import React from "react";
 import { getUnValuedSkills, getSkills, getAboutMe } from "../services/skillService";
 import ProgressBar from "@ramonak/react-progress-bar";
-import $ from "jquery";
 
 class About extends React.Component {
   constructor() {
@@ -59,7 +58,6 @@ class About extends React.Component {
           <div className="row">
             <div className="skill-mf col-md-6">
               {this.state.skills.map((skill) => {
-                // const value = Math.min(cur, skill.value);
                 return (
                   <div key={skill.id} style={{ border: "15px solid rgba(0, 0, 0, 0)" }}>
                     <div>
