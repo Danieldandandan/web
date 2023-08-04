@@ -38,17 +38,17 @@ const aboutMe = [
   {
     id: "first-p-about",
     content:
-      "Lorem ipsum pariatur consectetur laboris occaecat nulla aliqua irure ad deserunt duis. Eiusmod nulla cupidatat labore sint sit aute dolore irure nostrud ut incididunt. Anim laborum reprehenderit labore magna ut dolore quis irure. Labore ea duis deserunt ullamco irure fugiat deserunt ut nisi ea minim proident. Nisi consectetur do non magna duis aliqua minim minim veniam. In occaecat minim qui consequat elit mollit consectetur non id tempor. Amet adipisicing occaecat tempor culpa quis est duis.",
+      "Hello, my name is Zhencheng Chu, you may also know me as Daniel. I was Born in China, I embarked on a transformative journey that led me to the United States for high school before pursuing my passion for computer science at UCSC (University of California Santa Cruz). Swiftly completing my degree in three years with an impressive 3.78 GPA, I emerged not only as a diligent student but also as a fervent enthusiast of software development, particularly in the dynamic realm of full stack development.",
   },
   {
     id: "second-p-about",
     content:
-      "Lorem ipsum pariatur consectetur laboris occaecat nulla aliqua irure ad deserunt duis. Eiusmod nulla cupidatat labore sint sit aute dolore irure nostrud ut incididunt. Anim laborum reprehenderit labore magna ut dolore quis irure. Labore ea duis deserunt ullamco irure fugiat deserunt ut nisi ea minim proident. Nisi consectetur do non magna duis aliqua minim minim veniam. In occaecat minim qui consequat elit mollit consectetur non id tempor. Amet adipisicing occaecat tempor culpa quis est duis.",
+      "My hands-on experience as a Full Stack Software Engineer intern further kindled my dedication to this field. Proficient in a spectrum of technologies including React, NodeJs, MongoDb, Java, and Java Spring Boot, I've crafted a robust skill set to propel digital innovation.",
   },
   {
     id: "third-p-about",
     content:
-      "Lorem ipsum pariatur consectetur laboris occaecat nulla aliqua irure ad deserunt duis. Eiusmod nulla cupidatat labore sint sit aute dolore irure nostrud ut incididunt. Anim laborum reprehenderit labore magna ut dolore quis irure. Labore ea duis deserunt ullamco irure fugiat deserunt ut nisi ea minim proident. Nisi consectetur do non magna duis aliqua minim minim veniam. In occaecat minim qui consequat elit mollit consectetur non id tempor. Amet adipisicing occaecat tempor culpa quis est duis.",
+      "Yet, my interests extend beyond the digital landscape. During my leisure, I find solace in the gym, relish spirited basketball matches, and occasionally dive into the immersive world of video games. My insatiable curiosity, coupled with a zeal for continuous learning, consistently fuels my personal and professional growth.",
   },
 ];
 
