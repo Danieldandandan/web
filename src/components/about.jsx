@@ -48,7 +48,6 @@ class About extends React.Component {
   }
 
   render() {
-    const cur = this.state.value;
     return (
       <section id="about" className="about-mf sect-pt4 route">
         <div className="title-box text-center">
