@@ -1,39 +1,14 @@
 import React from "react";
-import { getUnValuedSkills, getSkills, getAboutMe } from "../services/skillService";
-import ProgressBar from "@ramonak/react-progress-bar";
+import { getAboutMe } from "../services/skillService";
+import ProgressTable from "./elements/progressTable";
 
 class About extends React.Component {
   constructor() {
     super();
     this.state = {
-      skills: getUnValuedSkills(),
       about_me: getAboutMe(),
       value: 0,
     };
-    this.progressBarAnmi = this.progressBarAnmi.bind(this);
-    this.met = false;
-  }
-  getLabelColor(value) {
-    if (value <= 60) return "#de1616";
-    if (value < 80) return "#f0d330";
-    return "#24d648";
-  }
-  progressBarAnmi() {
-    if (this.state.met) {
-      window.removeEventListener("scroll", this.progressBarAnmi);
-      return;
-    }
-    const prevHeight = document.getElementById("about").getBoundingClientRect().top;
-    const height = window.innerHeight;
-    if (prevHeight < height / 2) {
-      this.setState({ met: true });
-      this.setState({ skills: getSkills() });
-    }
-  }
-
-  componentDidMount() {
-    this.setState({ met: false });
-    window.addEventListener("scroll", this.progressBarAnmi);
   }
 
   render() {
@@ -46,25 +21,7 @@ class About extends React.Component {
         <div className="container">
           <div className="row">
             <div className="skill-mf col-md-6">
-              {this.state.skills.map((skill) => {
-                return (
-                  <div key={skill.id} style={{ border: "15px solid rgba(0, 0, 0, 0)" }}>
-                    <div>
-                      <span>{skill.content}</span>
-                      <span className="pull-right">{skill.porcentage}</span>
-                    </div>
-                    <div id="progressBar">
-                      <ProgressBar
-                        completed={skill.value}
-                        animateOnRender
-                        bgColor={this.getLabelColor(skill.value)}
-                        transitionTimingFunction="ease"
-                        transitionDuration="6s"
-                      />
-                    </div>
-                  </div>
-                );
-              })}
+              <ProgressTable />
             </div>
             <div className="col-md-6">
               <div className="about-me pt-4 pt-md-0">

@@ -47,10 +47,12 @@ class Navbar extends React.Component {
   }
 
   handleScrollToSection = (sectionId) => {
-    const targetSection = document.getElementById(sectionId);
-    if (targetSection) {
-      targetSection.scrollIntoView({ behavior: "smooth", block: "end" });
-    }
+    const target = document.getElementById(sectionId);
+    if (!target) return;
+    const targetPostion = target.getBoundingClientRect().top + window.scrollY;
+    const navBarHeight = document.getElementById("mainNav").offsetHeight;
+    const h = Math.max(targetPostion - navBarHeight, 0);
+    window.scrollTo({ top: h, behavior: "smooth" });
   };
 
   render() {

@@ -23,13 +23,13 @@ class Contact extends React.Component {
                 Whether you want to get in touch, talk about a project collaboration, or just say
                 hi, I'd love to hear from you!
               </p>
-              <ul class="list-ico">
+              <ul className="list-ico">
                 <li>
-                  <span class="ion-ios-telephone"></span> (669) 285-7080
+                  <span className="ion-ios-telephone"></span> (669) 285-7080
                 </li>
                 <li>
                   <a href="mailto:workchuzc@gmail.com">
-                    <span class="ion-email"></span> workchuzc@gmail.com
+                    <span className="ion-email"></span> workchuzc@gmail.com
                   </a>
                 </li>
               </ul>
@@ -68,7 +68,7 @@ class Contact extends React.Component {
                 <li>
                   <a href={pdf} download={true} target="_blank" rel="noopener noreferrer">
                     <span className="ico-circle">
-                      <i class="bi bi-file-earmark-pdf-fill"></i>
+                      <i className="bi bi-file-earmark-pdf-fill"></i>
                     </span>
                   </a>
                 </li>
