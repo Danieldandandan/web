@@ -11,8 +11,6 @@ class About extends React.Component {
       value: 0,
     };
     this.progressBarAnmi = this.progressBarAnmi.bind(this);
-    // this.valueIncrease = this.valueIncrease.bind(this);
-
     this.met = false;
   }
   getLabelColor(value) {
@@ -30,17 +28,8 @@ class About extends React.Component {
     if (prevHeight < height / 2) {
       this.setState({ met: true });
       this.setState({ skills: getSkills() });
-      // this.valueIncrease();
     }
   }
-  // async valueIncrease() {
-  //   for (let i = 0; i <= 100; i++) {
-  //     this.setState({ value: i });
-  //     await new Promise((resolve) => setTimeout(resolve, 100));
-  //   }
-  //   this.setState({ value: 100 });
-  //   console.log("V: ", this.state.value);
-  // }
 
   componentDidMount() {
     this.setState({ met: false });

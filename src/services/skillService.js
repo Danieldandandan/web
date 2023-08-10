@@ -1,13 +1,12 @@
 const skills = [
-  { id: "HTML5_skill", content: "HTML5", porcentage: "80%", value: "80" },
-  { id: "CSS3_skill", content: "CSS3", porcentage: "75%", value: "75" },
+  { id: "HTML5_skill", content: "HTML", porcentage: "80%", value: "80" },
+  { id: "CSS3_skill", content: "CSS", porcentage: "75%", value: "75" },
   {
     id: "JavaScript_skill",
     content: "JavaScript",
     porcentage: "90%",
     value: "90",
   },
-  { id: "PHP_skill", content: "PHP", porcentage: "70%", value: "70" },
   {
     id: "ReactJS_skill",
     content: "ReactJS",
@@ -21,16 +20,22 @@ const skills = [
     value: "75",
   },
   {
-    id: "VanillaJS_skill",
-    content: "VanillaJS",
+    id: "NodeJs_skill",
+    content: "NodeJs",
     porcentage: "85%",
     value: "85",
   },
   {
-    id: "Wordpress_skill",
-    content: "Wordpress",
-    porcentage: "80%",
-    value: "80",
+    id: "SQL_skill",
+    content: "SQL",
+    porcentage: "75%",
+    value: "75",
+  },
+  {
+    id: "Java_skill",
+    content: "Java",
+    porcentage: "90%",
+    value: "90",
   },
 ];
 
@@ -56,6 +61,7 @@ export function getSkills() {
   return skills;
 }
 export function getUnValuedSkills() {
+  skills.sort((a, b) => b.value - a.value);
   let curSkills = [...skills];
   const updatedSkills = curSkills.map((sk) => ({ ...sk, value: 0 }));
   return updatedSkills;

@@ -44,40 +44,30 @@ class Navbar extends React.Component {
         this.setState({ logo: logo1 });
       }
     });
-
-    $('a.js-scroll[href*="#"]:not([href="#"])').on("click", function () {
-      if (
-        window.location.pathname.replace(/^\//, "") === this.pathname.replace(/^\//, "") &&
-        window.location.hostname === this.hostname
-      ) {
-        var target = $(this.hash);
-        target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
-        if (target.length) {
-          $("html, body").animate(
-            {
-              scrollTop: target.offset().top - navHeight + 1,
-            },
-            1000,
-            "easeInExpo"
-          );
-          return false;
-        }
-      }
-    });
   }
+
+  handleScrollToSection = (sectionId) => {
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   render() {
     return (
       <nav className="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
         <div className="container">
-          <a className="navbar-brand js-scroll" href="#page-top">
+          <a className="navbar-brand js-scroll" onClick={() => this.handleScrollToSection("home")}>
             <img src={this.state.logo} alt="logo" style={{ maxWidth: "100px" }} />
           </a>
           <div className="navbar-collapse collapse justify-content-end" id="navbarDefault">
             <ul className="navbar-nav">
               {pages.map((page) => (
-                <li className="nav-item">
-                  <a className="nav-link js-scroll" href={"#" + page}>
+                <li className="nav-item" style={{ cursor: "pointer" }}>
+                  <a
+                    className="nav-link js-scroll"
+                    onClick={() => this.handleScrollToSection(page)}
+                  >
                     {page}
                   </a>
                 </li>
