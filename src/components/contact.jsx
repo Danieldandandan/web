@@ -1,5 +1,7 @@
 import React from "react";
 import imageOverlay from "../img/earth.jpg";
+import pdf from "../img/Zhencheng_Chu_Resume.pdf";
+
 class Contact extends React.Component {
   render() {
     return (
@@ -35,7 +37,7 @@ class Contact extends React.Component {
             <div className="socials">
               <ul>
                 <li>
-                  <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.zhenchengchu.com" target="_blank" rel="noopener noreferrer">
                     <span className="ico-circle">
                       <i className="ion-social-codepen"></i>
                     </span>
@@ -60,6 +62,13 @@ class Contact extends React.Component {
                   >
                     <span className="ico-circle">
                       <i className="ion-social-linkedin"></i>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href={pdf} download={true} target="_blank" rel="noopener noreferrer">
+                    <span className="ico-circle">
+                      <i class="bi bi-file-earmark-pdf-fill"></i>
                     </span>
                   </a>
                 </li>

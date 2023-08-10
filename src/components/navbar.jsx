@@ -49,7 +49,7 @@ class Navbar extends React.Component {
   handleScrollToSection = (sectionId) => {
     const targetSection = document.getElementById(sectionId);
     if (targetSection) {
-      targetSection.scrollIntoView({ behavior: "smooth" });
+      targetSection.scrollIntoView({ behavior: "smooth", block: "end" });
     }
   };
 
