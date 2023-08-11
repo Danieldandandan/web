@@ -13,7 +13,9 @@ const PortfolioCard = ({ project }) => {
           <h2 className="w-title"> {project.title} </h2>
           <div className="w-more">
             {project.skills.map((skill) => (
-              <span className="w-ctegory"> {skill} </span>
+              <span key={skill} className="w-ctegory">
+                {skill}
+              </span>
             ))}
             <div style={{ border: "5px solid rgba(0, 0, 0, 0)" }}></div>
           </div>

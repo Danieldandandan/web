@@ -12,7 +12,6 @@ class About extends React.Component {
   }
 
   render() {
-    console.log(this.state.height);
     return (
       <section id="about" className="about-mf sect-pt4 route">
         <div className="title-box text-center">
@@ -20,7 +19,7 @@ class About extends React.Component {
         </div>
         <div className="container">
           <div className="row">
-            <div className="skill-mf col-md-6">
+            <div style={{ height: "800px" }} className="skill-mf col-md-6">
               <ProgressTable />
             </div>
             <div className="col-md-6">

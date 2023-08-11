@@ -65,7 +65,7 @@ class Navbar extends React.Component {
           <div className="navbar-collapse collapse justify-content-end" id="navbarDefault">
             <ul className="navbar-nav">
               {pages.map((page) => (
-                <li className="nav-item" style={{ cursor: "pointer" }}>
+                <li className="nav-item" key={page} style={{ cursor: "pointer" }}>
                   <a
                     className="nav-link js-scroll"
                     onClick={() => this.handleScrollToSection(page)}

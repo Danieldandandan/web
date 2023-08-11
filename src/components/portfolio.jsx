@@ -17,7 +17,7 @@ class Portfolio extends React.Component {
         <div className="container">
           <div className="row">
             {projects.map((p) => (
-              <PortfolioCard project={p} />
+              <PortfolioCard project={p} key={p.title} />
             ))}
           </div>
         </div>
